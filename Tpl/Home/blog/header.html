@@ -1,0 +1,26 @@
+	<div class="header">
+		<div class="web">
+			<div class="logo">
+			<if condition="$title"><h2><a href="{$domain}">{$webname}</a></h2><else /><h1><a href="{$domain}">{$webname}</a></h1></if>
+			<p class="topdesc">{$webdesc}</p>
+			</div>
+		</div>
+	</div>
+	<div class="menu">
+		<span class="nav"></span>
+		<div class="web">
+			<ul>
+				<li><a href="__ROOT__">网站首页</a></li>
+				<volist name="menu" id="vo">
+					<li><a  href="{$vo.url}">{$vo.catename}</a></li>
+				</volist>
+					
+			</ul>
+			<div class="search">
+				<form action="__GROUP__/search.php" method="get" >
+					<input type="text" name="key" class="input" />
+					<button>搜索</button>
+				</form>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>力高理财产品</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/base.css" />
+	<link rel="stylesheet" href="css/zhezhao.css" />
+	<link rel="stylesheet" href="css/detail.css" />
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1.0" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<script type = "text/javascript" src = "js/jquery-1.7.2.min.js"></script>
+	<script type = "text/javascript" src = "js/cookie.js"></script>
+	<script type = "text/javascript" src = "js/base.js"></script>
+	<style>
+		#ct nav{
+			display:none;
+		}
+		#ct .zhezhao_di{
+			float:left;
+		}
+		select,option{
+			color:#ff7c8a;
+			display:inline;
+		}
+		.dv{
+			-webkit-box-flex:1;
+			display:-webkit-box;
+			-webkit-box-pack:end;
+		}
+		.dv p{
+			width: 42px;
+		}
+		select{
+			display:-webkit-box;
+			-webkit-box-flex:1;
+			opacity:0;
+		}
+	</style>
+</head>
+<body>
+	<div class = "box">
+		<section>
+			<aside class = "sec_toptop">
+				<div class = "sec_top_left" id = "tab">
+				
+								
+						<div  id="day" class = "active" productCat="M" >
+							<p >月账户</p>
+						</div>
+						<div style = "border-left:1px #1acbbb solid" id="year" productCat="Y">
+							<p>年账户</p>
+						</div>
+									</div>
+			</aside>
+			<div id = "box">
+				<nav  id="M">
+					<aside class = "product_o">
+						<p>预期年化收益率</p>
+						<span>累计加入219081人</span>
+					</aside>
+					<aside class = "product_di">
+						
+					</aside>
+					<div class="cln">
+					    <aside class = "product_div">
+							<div class = "product_div_od">
+								<p>6.</p>
+							</div>
+							<div class = "product_div_od">
+								<p>8<span>%</span></p>
+							</div>
+						</aside>
+						 <aside class = "product_div">
+							<div class = "product_div_od">
+								<p>7.</p>
+							</div>
+							<div class = "product_div_od">
+								<p>4<span>%</span></p>
+							</div>
+						</aside>
+					    <aside class = "product_div web">
+							<div class = "product_div_od">
+								<p>8.</p>
+							</div>
+							<div class = "product_div_od">
+								<p>4<span>%</span></p>
+							</div>
+						</aside>
+						<aside class = "product_div">
+							<div class = "product_div_od">
+								<p>1</p>
+							</div>
+							<div class = "product_div_od">
+								<p>0.</p>
+							</div>
+							<div class = "product_div_od">
+								<p>4<span>%</span></p>
+							</div>
+						</aside>
+						<aside class = "product_div">
+							<div class = "product_div_od">
+								<p>1</p>
+							</div>
+							<div class = "product_div_od">
+								<p>2.</p>
+							</div>
+							<div class = "product_div_od">
+								<p>0<span>%</span></p>
+							</div>
+						</aside>
+					</div>
+
+						<div class="ca" id = "ta">
+						<div  onclick="checkProduct('M1-00001','M1')">
+							<p>1月</p>
+						</div>
+						<div  onclick="checkProduct('M2-00002','M2')">
+							<p>2月</p>
+						</div>
+						<div class="activ" onclick="checkProduct('Q3-00001','Q3')">
+							<p style="color:#1acbbb">3月</p>
+						</div>
+						<div  onclick="checkProduct('Q6-00002','Q6')">
+							<p>6月</p>
+						</div>
+						<div onclick="checkProduct('Q9-00003','Q9')">
+							<p>9月</p>
+						</div>
+					</div>
+					<div class="cne">
+					   <aside class = "product_xd" >
+							
+							<div>
+								<div class= "left"><p>预期年化收益率</p></div>
+								<div class = "youce"><span>固定收益率6.8%</span></div>
+							</div>
+							<div>
+								<div class= "left"><p>买入金额</p></div>
+								<div class = "youce"><span>1万起，20万上限</span></div>
+							</div>
+							<div>
+								<div class= "left"><p>安全保障</p></div>
+								<div class = "youce"><span>资金安全保障计划</span></div>
+							</div>
+						</aside>
+						<aside class = "product_xd" >
+							
+							<div>
+								<div class= "left"><p>预期年化收益率</p></div>
+								<div class = "youce"><span>固定收益率7.4%</span></div>
+							</div>
+							<div>
+								<div class= "left"><p>买入金额</p></div>
+								<div class = "youce"><span>1万起，30万上限</span></div>
+							</div>
+							<div>
+								<div class= "left"><p>安全保障</p></div>
+								<div class = "youce"><span>资金安全保障计划</span></div>
+							</div>
+						</aside>
+						<aside class = "product_xd" style="display:block">
+						
+							<div>
+								<div class= "left"><p>预期年化收益率</p></div>
+								<div class = "youce"><span>固定收益率8.4%</span></div>
+							</div>
+							<div>
+								<div class= "left"><p>买入金额</p></div>
+								<div class = "youce"><span>1万起，50万上限</span></div>
+							</div>
+							<div>
+								<div class= "left"><p>安全保障</p></div>
+								<div class = "youce"><span>资金安全保障计划</span></div>
+							</div>
+						</aside>
+						<aside class = "product_xd"  >
+							
+							<div>
+								<div class= "left"><p>预期年化收益率</p></div>
+								<div class = "youce"><span>固定收益率10.4%</span></div>
+							</div>
+							<div>
+								<div class= "left"><p>买入金额</p></div>
+								<div class = "youce"><span>5万起，100万上限</span></div>
+							</div>
+							<div>
+								<div class= "left"><p>安全保障</p></div>
+								<div class = "youce"><span>资金安全保障计划</span></div>
+							</div>
+						</aside>
+						<aside class = "product_xd" >
+						
+						<div>
+							<div class= "left"><p>预期年化收益率</p></div>
+							<div class = "youce"><span>固定收益率12.0%</span></div>
+						</div>
+						<div>
+							<div class= "left"><p>买入金额</p></div>
+							<div class = "youce"><span>5万起，100万上限</span></div>
+						</div>
+						<div>
+							<div class= "left"><p>安全保障</p></div>
+							<div class = "youce"><span>资金安全保障计划</span></div>
+						</div>
+					</aside>
+										</div>
+				</nav>
+				<nav id="Y">
+					<aside class = "product_o">
+						<p>预期年化收益率</p>
+						<span>累计加入21372人</span>
+					</aside>
+					<aside class = "product_di">
+						
+					</aside>
+					<aside class = "product_d">
+						<div class = "product_div_od">
+							<p>1</p>
+						</div>
+						<div class = "product_div_od">
+							<p>4.</p>
+						</div>
+						<div class = "product_div_od">
+							<p>4<span>%</span></p>
+						</div>
+					</aside>
+					<aside class = "product_wb">
+					</aside>
+					<aside class = "solid"></aside>
+					<aside class = "product_xd">
+						
+						<div>
+							<div class= "left"><p>预期年化收益率</p></div>
+							<div class = "youce"><span>固定收益率14.4%</span></div>
+						</div>
+						<div>
+							<div class= "left"><p>买入金额</p></div>
+							<div class = "youce"><span>5万起，200万上限</span></div>
+						</div>
+						<div>
+							<div class= "left"><p>安全保障</p></div>
+							<div class = "youce"><span>资金安全保障计划</span></div>
+						</div>
+					</aside>
+				</nav>
+				
+			</div>
+			
+			<aside class = "solid"></aside>
+			<aside class = "product_od" id="xiangqing">
+				<a href="/licai/licaidetail.html" ><p>查看详情</p></a>
+			</aside>
+			<aside class = "product_d" style = "visibility:hidden">
+				<img src="../weixin/img/dui.png" alt="">
+				<p>资金安全由华安保险公司本金承保</p>
+			</aside>
+			<aside class = "product_odi">
+				<div class = "product_div_t" id="is_jiaru">
+				<a href = "#" id="zhuanru"><p>马上加入</p></a>
+				</div>
+			</aside>
+		</section>
+	
+	</div>
+	 <script>
+	 	var lastptype="3";
+	 	var lastproduct="3";
+	 	var lastProducttype=$("#ptype").val();
+	 	var productCat=$("#ptype").val();
+	 	var token=$("#user").val();
+	 	var restMonthAmount=isNaN(parseFloat($("#restMonthAmount").val())) ? 0 : parseFloat($("#restMonthAmount").val());
+		jQuery(document).ready(function (){
+			var index;
+			var id;
+			var $div = $('nav');
+			var $cne = $('.cne aside');
+			var $bt = $('.cln aside');
+			var $ct = $('#ct nav');
+			var ptype=$("#ptype").val();
+			if(ptype=="M"){
+				showType("day","M");
+			}else if(ptype=="Q3"||ptype=="Q6"||ptype=="Q9"){
+				showType("month","Q");
+				$("#ptype1").val(ptype);
+			}else{
+				showType("year","Y");
+			}
+			$('#tab div').on('click',function (){
+				id = $(this).attr("id");
+				productCat = $(this).attr("productCat");
+				showType(id,productCat);
+				if(productCat=="Q"){
+					productCat="Q"+lastptype;
+					lastProducttype="Q"+lastproduct;
+				}else{
+					lastProducttype=productCat;
+				}
+			});
+			$('#ta div').on('click',function (){
+				index = $(this).index();
+				$(this).addClass('activ').siblings().removeClass();
+				$(this).find('p').css('color','#1acbbb').parent().siblings().find('p').css('color','#999999');
+				$cne.eq(index).show().siblings().hide();
+				$bt.eq(index).addClass('web').siblings().removeClass('web');
+				if(index==0){
+					$("#productType").val("Q3");
+					lastproduct="3";
+					lastptype="3";
+					productCat="Q3";
+					lastProducttype="Q3";
+				}else if(index==1){
+					$("#productType").val("Q6");
+					lastproduct="6";
+					lastptype="6";
+					productCat="Q6";
+					lastProducttype="Q6";
+				}else{
+					$("#productType").val("Q9");
+					lastproduct="9";
+					lastptype="9";
+					productCat="Q9";
+					lastProducttype="Q9";
+				}
+			});
+			 var userYield=$("#userYield").val();
+			$('#topzh div').on('click',function (){
+				index = $(this).index();
+				$(this).addClass('topzh_zhezhao act').siblings().removeClass('act');
+				$ct.eq(index).show().siblings().hide();
+		
+				$("#tequan").html(userYield+"%");
+				if(index==0){
+					$("#yuqi").html("11%+");
+					$("#baseYield").val("11");
+					$("#productCat").val("M");
+					$("#input_days").val("365");
+				    caluateProfit();
+				}else if(index==1){
+					$("#yuqi").html("8%+");
+					$("#baseYield").val("8");
+					$("#productCat").val("Q");
+					$("#input_days").val("90");
+					caluateAmount();
+				}else{
+					$("#yuqi").html("12%+");
+					$("#baseYield").val("12");
+					$("#productCat").val("Y");
+					$("#input_days").val("365")
+					caluateAmount();
+				}
+				
+			});
+			$('#sec').change(function (){
+				$('#bi p').text($(this).val());
+				if($(this).val()=="90"){
+					$("#input_days").val("90");
+					$("#productType").val("Q3");
+					
+				}
+				if($(this).val()=="180"){
+					$("#yuqi").html("10%+");
+					$("#baseYield").val("10");
+					$("#input_days").val("180");
+					$("#productType").val("Q6");
+					
+				}
+				if($(this).val()=="270"){
+					$("#yuqi").html("11%+");
+					$("#baseYield").val("11");
+					$("#input_days").val("270");
+					$("#productType").val("Q9");
+					
+				}
+				caluateAmount();
+			});
+			runData();
+			function showType(obj,value){
+				$("#"+obj).addClass('active').siblings().removeClass();
+				$("#"+obj).find('p').css('color','#fff').parent().siblings().find('p').css('color','#1acbbb');
+				$("#ptype1").val(value);
+				if(value=="M"){
+					$("#M").show();
+					$("#Q").hide();
+					$("#Y").hide();
+					$("#productType").val("M");
+					runData();
+					if(parseFloat(restMonthAmount)-100<0.0){
+						if (token!=null && token!=""){
+							$("#is_jiaru").html("<a href = '#' id = 'zhuanru' ><p>马上加入</p></a>");
+						}else{
+							$("#is_jiaru").html("<a href = '#' id = 'zhuanru' ><p>马上加入</p></a>");
+						}
+					}
+				}else if(value=="Q"){
+					$("#Q").show();
+					$("#M").hide();
+					$("#Y").hide();
+					$("#productType").val("Q3");
+					runData();
+				}else{
+					$("#Y").show();
+					$("#Q").hide();
+					$("#M").hide();
+					$("#productType").val("Y");
+					runData();
+				}
+			}
+			
+			
+		});
+		function looklookQ(){
+			$("#month").addClass('active').siblings().removeClass();
+			$("#month").find('p').css('color','#fff').parent().siblings().find('p').css('color','#1acbbb');
+			$("#Q").show();
+			$("#M").hide();
+			$("#Y").hide();
+			lastProducttype="Q3";
+			productCat="Q3";
+			runData();
+		}
+		function runData(){
+			var flag=$("#flag").val();
+			if (token!=null && token!=""){
+			    if(flag==true){
+			    	if(parseFloat(restMonthAmount)-100<0.0){
+			    	 	$("#is_jiaru").html("<a href = '#' id = 'zhuanru' onclick='formSubmit()'><p>马上加入</p></a>");
+			    	}else{
+			    		$("#is_jiaru").html("<a href = '#' id = 'zhuanru' onclick='formSubmit()'><p>马上加入</p></a>");
+			    	}
+			    }else{
+			    	if((parseFloat(restMonthAmount)-100<0.0&&productCat=="M")==true){
+			    		$("#is_jiaru").html("<a href = '#' id = 'zhuanru' ><p>马上加入</p></a>");
+			    	 }else{
+			    	 	$("#is_jiaru").html("<a href = '#' id = 'zhuanru' onclick='formSubmit()'><p>马上加入</p></a>");
+			    	 }
+			    	 
+			    }
+				
+			}else{
+					if(parseFloat(restMonthAmount)-100<0.0&&productCat=="M"){
+			    		$("#is_jiaru").html("<a href = '#' id = 'zhuanru' ><p>马上加入</p></a>");
+			    	 }else{
+			    	 	$("#is_jiaru").html("<a href ='#' id = 'zhuanru'><p>马上加入</p></a>");
+			    	 }
+				
+			}
+		}
+		function checkProduct(value,obj){
+			$("#productCode").val(value);
+			$("#productType").val(obj);
+			$("#ptype1").val(obj);
+			if(token!=null && token!=""){
+			   history.pushState({"ptype":obj}, "力高理财","#"+obj);
+			}else{
+			   history.pushState({}, "力高理财","#");
+			}
+			
+			history.pushState({"ptype":obj}, "力高理财","#"+obj);
+		}
+		function formSubmit(){
+		    $("#ptype1").val(productCat);
+			$("#buyForm").submit();
+		}
+		
+		function productDetail(){
+			$("#productType").val(lastProducttype);
+			$("#productTypeForm").submit();
+		}
+		function showDetalDIv(){
+		    $("#zhezhao").show();
+			$("#showDiv").show();
+			$("#zhe").show();
+			caluateAmount();
+		}
+		
+		function caluateAmount() {
+			var input_days=$("#input_days").val();
+			var input_sal=$("#input_sal").val();
+			var baseYield=$("#baseYield").val();
+		    var userYield=$("#userYield").val();
+		    if(isNumber(input_days)&&isNumber(input_sal)){
+			    var shouyi=(input_sal*input_days*(parseFloat(baseYield)+parseFloat(userYield))/100/365).toFixed(2);
+			    $("#shouyi").html(shouyi);
+		    }
+	   }
+
+		function caluateProfit(){
+		var productCat=$("#productCat").val();
+		var userYield=$("#userYield").val();
+		if(productCat=="M"){
+		var url="../weixin/caluateProfit.htm";
+		var days=$("#input_days").val();
+		jQuery.get(url,{"days":days},function (data){
+				if(data!=null){
+					$("#yuqi").html(data+"+");
+					$("#baseYield").val(data);
+					caluateAmount();
+				}
+			});
+			 
+			}
+		} 
+		//关闭弹出层
+		$("#zhezhao2").click(function(){
+		 	$("#zhezhao").hide();
+			$("#showDiv").hide();
+			$("#zhe").hide();
+		});
+		$("#zhe2").click(function(){
+		 	$("#zhezhao").hide();
+			$("#showDiv").hide();
+			$("#zhe").hide();
+		});
+		$("#zhezhao").click(function (){
+			zhezhao.style.display = "none";
+			showDiv.style.display = "none";
+			zhe.style.display = "none";
+		});
+	</script>
+	
+</body>
+</html>

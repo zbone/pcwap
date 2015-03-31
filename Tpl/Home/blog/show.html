@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>{$title}-{$webname}</title>
+<meta name="keywords" content="{$key}" />
+<meta name="description" content="{$desc}" />
+<include file=":style" />
+<script type="text/javascript" src="__PUBLIC__/blog/js/jquery.js"></script>
+</head>
+<body>
+<include file=":header" />
+
+	<div class="web">
+		<div class="ann">
+				<a href="/">网站首页</a>  {$daohan} > {$title}
+		</div>
+		<div class="left">
+
+			
+			
+				<div class="postlist">
+					<h1>{$title}</h1>
+					<div class="content">
+						{$content}
+					</div>
+				</div>
+			<div class="recshow">
+			<h2>推荐阅读</h2>
+				<ul>
+				<pcwap paixu="isrec desc" num="4" >
+					<li>
+						<a href="{$pcwap.url}"><img src="{$pcwap.pic}" alt="{$pcwap.name}" /></a>
+						<p><a href="{$pcwap.url}">{$pcwap.name}</a></p>
+					</li>
+				</pcwap>
+				</ul>
+			</div>
+			<div class="revspost">
+				<h3>发表评论</h3>
+				<form method="post">
+					<p><span>称呼:</span><input type="text" name="name" class="input" /></p>
+					<p><span>E-mail:</span><input type="email" name="email" class="input" /></p>
+					<p><textarea name="content" id="con"></textarea></p>
+					
+					<p><button type="button" id="postrev">提交评论</button></p>
+				</form>
+				
+			</div>
+			<script>
+			$("#postrev").click(function(){
+				if($("input[name='name']").val()==false){
+							$("input[name='name']").focus();
+							return false
+				}
+				if($("input[name='email']").val()==false){
+							$("input[name='email']").focus();
+							return false
+				}
+				
+				if($("#con").val()==false){
+							$("#con").focus();
+							return false
+				}
+				
+				$.ajax({
+					type:'post',
+					url:'book.php',
+					data:{
+						name:$("input[name='name']").val(),
+						email:$("input[name='email']").val(),
+						tel:$("input[name='tel']").val(),
+						content:$("#con").val(),
+						infoid:{$infoid},
+					},
+					success:function(msg){
+						alert(msg.info);
+					},
+					
+				});				
+			});
+			
+			</script>
+		</div>
+	
+		<include file=":right" />
+</div>
+</div>
+<include file=":footer" />
+</body>
+</html>

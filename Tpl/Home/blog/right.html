@@ -1,0 +1,34 @@
+<div class="right">
+			<div class="down">
+			
+			<P>联系人：{$lianxi}</P>
+			<P>电话：{$tel}</P>
+			<P>邮箱：{$email}</P>
+			<P>地址：{$address}</P>
+		
+			</div>
+			<div class="new">
+			<h3>最新评论</h3>	
+			<newpost num="10">
+			<div class="noewpost">
+				<a href="{$newpost.url}"><img src="{$newpost.pic}" class="newpostimg" /></a>
+				<h4><a href="{$newpost.url}">{$newpost.title}</a></h4>
+				<p>{:date('m-d',$newpost[time])}</p>
+			</div>
+			</newpost> 
+			
+			</div>
+			<div class="d_tags">
+				<h3>标签云</h3>
+				<taglist num="20">
+				<a href="{$taglist.url}">{$taglist.tag}</a>	
+				</taglist> 
+			</div>
+			<div class="leftad">
+				<adlist cate="cate">
+					<ul>
+						<li><a href="{$adlist.adurl}" rel="nofollow"><img src="{$adlist.adpic}" alt="{$adlist.adremak}" /></a></li>
+					</ul>
+				</adlist>
+			</div>
+		</div>

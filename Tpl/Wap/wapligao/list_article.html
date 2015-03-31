@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title><if condition="$seotitle">{$seotitle}<else />{$title}</if>-{$webname}</title>
+<meta name="keywords" content="{$key}" />
+<meta name="description" content="{$desc}" /> 
+<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/wapligao/css/public.css" />
+<link rel="stylesheet" href="__PUBLIC__/wapligao/css/index2.css">
+<link rel="stylesheet" href="__PUBLIC__/wapligao/css/reset.css">
+<script src="__PUBLIC__/wapligao/js/TouchSlide.1.1.js"></script>
+<base target="_self">
+</head>
+
+<body>
+<div class="lgbody">
+<div class="header2">
+   <include file=":header" />
+</div>
+<div class="list-content" >
+ <volist name="list" id="vo" >
+
+    <a href="{$vo.url}" >
+        <div class="text-img">{$vo.name}</div>
+        <p></p>
+    </a>
+</volist>
+
+ <div class="button">
+ {$page}
+	</div>
+
+</div>
+
+	<div class="container" data-role="container" style="margin-bottom: 50px;">
+
+
+		<section style="width:95%; margin:0px auto;">
+	<div id="mcover" onclick="document.getElementById('mcover').style.display='';" style="display:none;">
+		<img src="__PUBLIC__/wapligao/images/guide.png">
+	</div>
+	<div class="text" id="content">
+		<div id="mess_share">
+			<div id="share_1">
+				<button class="button2" onclick="document.getElementById('mcover').style.display='block';">
+					<img src="__PUBLIC__/wapligao/images/icon_msg.png">&nbsp;发送给朋友
+				</button>
+			</div>
+			<div id="share_2">
+				<button class="button2" onclick="document.getElementById('mcover').style.display='block';">
+					<img src="__PUBLIC__/wapligao/images/icon_timeline.png">&nbsp;分享到朋友圈
+				</button>
+			</div>
+			<div class="clr"></div>
+		</div>
+	</div>
+</section>
+<div style="padding-bottom:5px!important;">
+	<a href="javascript:history.back(-1);" style="font-size:12px;margin:5px auto;display:block;color:#fff;text-align:center;line-height:35px;background:#333;margin-bottom:-10px;">返回顶部</a>
+</div>
+
+
+	</div>
+</div>
+
+
+<div class="foot">
+        <include file=":footer" />
+</div>
+    <script>
+		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+			
+		
+window.shareData = {
+				"imgUrl": "images/01.jpg",
+				"timeLineLink": "index.htm",
+				"sendFriendLink": "index.htm",
+				"weiboLink": "index.htm",
+				"tTitle": "宁波力高财富投资管理有限公司",
+				"tContent": "宁波力高财富投资管理有限公司",
+				"fTitle": "宁波力高财富投资管理有限公司",
+				"fContent": "一个可以贷款的微信平台",
+				"wContent": "一个可以贷款的微信平台"
+			};
+			// 发送给好友
+			WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+				WeixinJSBridge.invoke('sendAppMessage', {
+					"img_url": window.shareData.imgUrl,
+					"img_width": "640",
+					"img_height": "640",
+					"link": window.shareData.sendFriendLink,
+					"desc": window.shareData.fContent,
+					"title": window.shareData.fTitle
+				}, function (res) {
+                    if('send_app_msg:cancel' != res.err_msg){
+                        shareReport();
+                    }
+					_report('send_msg', res.err_msg);
+				})
+			});
+
+			// 分享到朋友圈
+			WeixinJSBridge.on('menu:share:timeline', function (argv) {
+				WeixinJSBridge.invoke('shareTimeline', {
+					"img_url": window.shareData.imgUrl,
+					"img_width": "640",
+					"img_height": "640",
+					"link": window.shareData.timeLineLink,
+					"desc": window.shareData.tContent,
+					"title": window.shareData.tTitle
+				}, function (res) {
+                    if('share_timeline:cancel' != res.err_msg){
+                        shareReport();
+                    }
+					_report('timeline', res.err_msg);
+				});
+			});
+
+			// 分享到微博
+			WeixinJSBridge.on('menu:share:weibo', function (argv) {
+				WeixinJSBridge.invoke('shareWeibo', {
+					"content": window.shareData.wContent,
+					"url": window.shareData.weiboLink
+				}, function (res) {
+                    if('share_weibo:cancel' != res.err_msg){
+                        shareReport();
+                    }
+					_report('weibo', res.err_msg);
+				});
+			});
+		}, false)
+        function shareReport(){
+            var pid = '301989';
+            var id = '7804';
+            var wechatid = 'fromUsername';
+            var url = '/magazine/magazine/ShareBack';
+            $.post(url, {pid:pid,id:id,wechatid:wechatid}, function(data){
+                if(data.status == 0){
+                    // success
+                    // alert(data.message);
+                    finishDump(data.data);
+                }else{
+                    // failed
+                    // alert(data.message);
+                }
+            }, 'json');
+        }
+        function FavoriteReport(){
+            var pid = '301989';
+            var id = '7804';
+            var wechatid = 'fromUsername';
+            var url = '/magazine/magazine/ShareBack';
+            $.post(url, {pid:pid,id:id,wechatid:wechatid}, function(data){
+                if(data.status == 0){
+                    // success
+                    // alert(data.message);
+                    finishDump(data.data);
+                }else{
+                    // failed
+                    // alert(data.message);
+                }
+            }, 'json');
+        }
+        function finishDump(data){
+            if(data){
+                if(data.redirect){
+                    window.location = data.redirect;
+                }else if(data.tel){
+                    var tel_obj = $('<a href="tel:'+data.tel+'"></a>');
+                    $(tel_obj).trigger('click');
+                }
+            }
+        }
+        // shareReport();
+        // FavoriteReport();
+	</script>
+
+</body>
+</html>

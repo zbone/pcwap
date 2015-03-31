@@ -1,0 +1,227 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="viewport" content="width=device-width,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title><?php echo ($webtitle); ?>-<?php echo ($webname); ?></title>
+	 <meta name="keywords" content="<?php echo ($webkey); ?>" />
+    <meta name="description" content="<?php echo ($webdesc); ?>" /> 
+    <link rel="stylesheet" href="__PUBLIC__/wapligao/css/index.css">
+    <script src="__PUBLIC__/wapligao/js/TouchSlide.1.1.js"></script>
+</head>
+<body>
+
+
+
+    <div>
+        <div class="head">
+             <!-- 轮播图 Start ================================ -->
+         <div id="focus" class="focus">
+                <div class="hd">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="bd">
+                    <ul>
+                        <li><a href="#">
+                            <img _src="__PUBLIC__/wapligao/images/banner.jpg" src="__PUBLIC__/wapligao/images/blank.png" /></a></li>
+                        <li><a href="#">
+                            <img _src="__PUBLIC__/wapligao/images/banner2.jpg" src="__PUBLIC__/wapligao/images/blank.png" /></a></li>
+                        <li><a href="#">
+                            <img _src="__PUBLIC__/wapligao/images/banner3.jpg" src="__PUBLIC__/wapligao/images/blank.png" /></a></li>
+                    </ul>
+                </div>
+            </div>
+            <script type="text/javascript">
+                TouchSlide({
+                    slideCell: "#focus",
+                    titCell: ".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+                    mainCell: ".bd ul",
+                    effect: "left",
+                    autoPlay: true, //自动播放
+                    autoPage: true, //自动分页
+                    switchLoad: "_src" //切换加载，真实图片路径为"_src" 
+                });
+            </script>
+	
+            <!-- 轮播图 End ================================ -->
+        </div>
+        <div class="content" style="width: 96%; margin-left:3.5%; margin-top:9%;">
+            <ul style="float: left; width: 25%; margin-top: 10%;">
+                <li style="width: 100%; text-align: center; border: #C00 0px solid; margin-top: 35%;
+                    margin-left: 20%;"><a href="#">
+                     <img src="__PUBLIC__/wapligao/images/msh.png" width="80%" class="quan"><p style="padding: 3px;">
+                            <span>生活服务</span>
+                        </p>
+                    </a></li>
+                <li style="width: 100%; text-align: center; border: #C00 0px solid; margin-top: 35%;
+                    margin-left: 20%;"><a href="/about/" style="color: #000; text-decoration: none;">
+                        <img src="__PUBLIC__/wapligao/images/jsq.png" width="80%"  class="quan"><p style="padding: 3px;">
+                            <span>关于力高</span>
+                        </p>
+                    </a></li>
+            </ul>
+            <ul style="float: left; width: 45%">
+                <li style="width: 55%; text-align: center; border: #C00 0px solid; margin-left: 21%;
+                    margin-top: 3%;"><a href="/cfnews.html">
+                     <img src="__PUBLIC__/wapligao/images/shy.png" width="80%" class="quan">
+                      <p style="padding: 3px;">
+                            <span>财富动态</span>
+                        </p>
+                       
+                    </a></li>
+                <li style="width: 100%; text-align: center; margin-top: -2%" >
+                    <a href="about/">
+                        <img src="__PUBLIC__/wapligao/images/logo4.png" width="100%" class="quan1"></a></li>
+                <li style="width: 55%; text-align: center; border: #C00 0px solid; margin-left: 21%;
+                    margin-top: 0%;"><a href="http://wap.athree.wang/chanpinzhongxin/jiedaizhongxin/">
+                        <img src="__PUBLIC__/wapligao/images/xhz.png" width="80%" class="quan"><p style="padding: 3px;">
+                            <span>申请借贷</span>
+                        </p>
+                    </a></li>
+            </ul>
+            <ul style="float: left; width: 25%; margin-top: 10%;">
+                <li style="width: 100%; text-align: center; border: #C00 0px solid; margin-top: 35%;
+                    margin-left: -20%;"><a href="/licai/">
+                        <div ><img src="__PUBLIC__/wapligao/images/hgj.png" width="80%" class="quan"><div class="quan10"></div></div><p style="padding: 3px;">
+                            <span>力高理财</span>
+                        </p>
+                    </a></li>
+                <li style="width: 100%; text-align: center; border: #C00 0px solid; margin-top: 35%;
+                    margin-left: -20%;"><a href="/remail.html">
+                        <img src="__PUBLIC__/wapligao/images/ycp.png" width="80%" class="quan"><p style="padding: 3px;">
+                            <span>力高会员</span>
+                        </p>
+                    </a></li>
+            </ul>
+        </div>
+        <div class="footer">
+            <ul>
+                <li><a href="/"><i class="ico1">
+                    <img src="__PUBLIC__/wapligao/images/zy.png" width="20"></i><span>首页</span></a></li>
+                <li><a href="tel:13732136280"><i class="ico2">
+                    <img src="__PUBLIC__/wapligao/images/phone.png" width="20"></i><span>致电</span></a></li>
+                <li><a href="http://wap.athree.wang/chanpinzhongxin/jiedaizhongxin/"><i class="ico3">
+                    <img src="__PUBLIC__/wapligao/images/dk.png" width="20"></i><span>贷款</span></a></li>
+                <li><a href="/about/"><i class="ico4">
+                    <img src="__PUBLIC__/wapligao/images/sc.png" width="20"></i><span>力高</span></a></li>
+            </ul>
+        </div>
+    
+    
+		</div>
+		<script>
+		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+			
+		
+window.shareData = {
+				"imgUrl": "images/01.jpg",
+				"timeLineLink": "index.htm",
+				"sendFriendLink": "index.htm",
+				"weiboLink": "index.htm",
+				"tTitle": "宁波力高财富投资管理有限公司",
+				"tContent": "宁波力高财富投资管理有限公司",
+				"fTitle": "宁波力高财富投资管理有限公司",
+				"fContent": "一个可以贷款的微信平台",
+				"wContent": "一个可以贷款的微信平台"
+			};
+			// 发送给好友
+			WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+				WeixinJSBridge.invoke('sendAppMessage', {
+					"img_url": window.shareData.imgUrl,
+					"img_width": "640",
+					"img_height": "640",
+					"link": window.shareData.sendFriendLink,
+					"desc": window.shareData.fContent,
+					"title": window.shareData.fTitle
+				}, function (res) {
+                    if('send_app_msg:cancel' != res.err_msg){
+                        shareReport();
+                    }
+					_report('send_msg', res.err_msg);
+				})
+			});
+
+			// 分享到朋友圈
+			WeixinJSBridge.on('menu:share:timeline', function (argv) {
+				WeixinJSBridge.invoke('shareTimeline', {
+					"img_url": window.shareData.imgUrl,
+					"img_width": "640",
+					"img_height": "640",
+					"link": window.shareData.timeLineLink,
+					"desc": window.shareData.tContent,
+					"title": window.shareData.tTitle
+				}, function (res) {
+                    if('share_timeline:cancel' != res.err_msg){
+                        shareReport();
+                    }
+					_report('timeline', res.err_msg);
+				});
+			});
+
+			// 分享到微博
+			WeixinJSBridge.on('menu:share:weibo', function (argv) {
+				WeixinJSBridge.invoke('shareWeibo', {
+					"content": window.shareData.wContent,
+					"url": window.shareData.weiboLink
+				}, function (res) {
+                    if('share_weibo:cancel' != res.err_msg){
+                        shareReport();
+                    }
+					_report('weibo', res.err_msg);
+				});
+			});
+		}, false)
+        function shareReport(){
+            var pid = '301989';
+            var id = '7804';
+            var wechatid = 'fromUsername';
+            var url = '/magazine/magazine/ShareBack';
+            $.post(url, {pid:pid,id:id,wechatid:wechatid}, function(data){
+                if(data.status == 0){
+                    // success
+                    // alert(data.message);
+                    finishDump(data.data);
+                }else{
+                    // failed
+                    // alert(data.message);
+                }
+            }, 'json');
+        }
+        function FavoriteReport(){
+            var pid = '301989';
+            var id = '7804';
+            var wechatid = 'fromUsername';
+            var url = '/magazine/magazine/ShareBack';
+            $.post(url, {pid:pid,id:id,wechatid:wechatid}, function(data){
+                if(data.status == 0){
+                    // success
+                    // alert(data.message);
+                    finishDump(data.data);
+                }else{
+                    // failed
+                    // alert(data.message);
+                }
+            }, 'json');
+        }
+        function finishDump(data){
+            if(data){
+                if(data.redirect){
+                    window.location = data.redirect;
+                }else if(data.tel){
+                    var tel_obj = $('<a href="tel:'+data.tel+'"></a>');
+                    $(tel_obj).trigger('click');
+                }
+            }
+        }
+        // shareReport();
+        // FavoriteReport();
+	</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>{$title}-{$webname}</title>
+<include file=":style" />
+<script type="text/javascript" src="__PUBLIC__/blog/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/blog/js/swipe.js"></script>
+</head>
+<body>
+<include file=":header" />
+
+	<div class="web">
+		<div class="ann">
+				<a href="/">网站首页</a> > {$title}
+		</div>
+		<div class="left">
+				<div class="ads" id="pcwap">
+				<div class="swipe-wrap">
+				<adlist cate="cate">
+					<div><a href="{$adlist.adurl}"><img src="{$adlist.adpic}" alt="{$adlist.adremak}" /></a></div>
+				</adlist>
+				</div>
+			</div>
+				<script>
+						window.mySwipe = new Swipe(document.getElementById('pcwap'), {
+						  startSlide: 2,
+						  speed: 500,
+						  auto: 3000,
+						  continuous: true,
+						  disableScroll: false,
+						  stopPropagation: false,
+						  callback: function(index, elem) {},
+						  transitionEnd: function(index, elem) {}
+						});
+						</script>
+			
+			<volist name="list" id="vo">
+				<div class="postlist">
+					<h2><a href="{$vo.url}">{$vo.name}</a></h2>
+					<div class="postimg">
+						<a href="{$vo.url}" rel="nofollow"><img src="{$vo.pic}" alt="{$vo.name}" /></a>
+					</div>
+					<div class="desc">
+						<p>{$vo.desc}</p>
+						<div class="time">
+							<a href="{$vo.url}">查看详情</a>
+								<span>发布时间:{$vo.time|msubstr=###,0,10}</span>												
+						</div>
+					</div>
+				</div>
+			</volist>
+			
+			<div class="pager">
+				<ul>
+					{$page}
+				</ul>
+			</div>
+		</div>
+		<include file=":right" />
+</div>
+</div>
+<include file=":footer" />
+</body>
+</html>
